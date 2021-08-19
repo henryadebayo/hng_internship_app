@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hng_internship_app/welcomePage.dart';
+import 'package:hng_internship_app/HomePage.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: FormPage(),
+      home: HomePage(),
     );
   }
 }

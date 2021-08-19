@@ -1,33 +1,32 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hng_internship_app/button.dart';
-
+import 'appbarlogo.dart';
 import 'const.dart';
-class FormPage extends StatefulWidget {
-  const FormPage({Key key}) : super(key: key);
+import 'formScreen.dart';
+import 'hngLogoPage.dart';
+
+
+
+class HomePage extends StatefulWidget {
+  const HomePage({Key key}) : super(key: key);
 
   @override
-  _FormPageState createState() => _FormPageState();
+  _HomePageState createState() => _HomePageState();
 }
 
-class _FormPageState extends State<FormPage> {
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: KdarkBlueColour,
         centerTitle: true,
-        title: Text("HNG InternShip By Zuri", style:TextStyle(color: Colors.white, ),
+        title: Text("HNG InternShip", style:TextStyle(color: Colors.white, ),
         ),
         actions: [
-          Container(
-            height: 20.0,
-            width: 20.0,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10.0),
-              image: AssetImage("images/image1.jpeg"),
-            ),
-          ),
+          appbarLogo(),
+          SizedBox(width: 25.0,)
         ],
       ),
       body:
@@ -35,25 +34,31 @@ class _FormPageState extends State<FormPage> {
             padding: const EdgeInsets.only(top:20.0, left: 10.0, right: 10.0),
             child: Column(
               children:[
-              Text("Hi Welcome to the HNG Interenship app, powered by Zuri"
+              Text("Hi, Welcome to the HNG Interenship app, powered by Zuri"
               , textAlign: TextAlign.center, style: TextStyle(fontSize: 20.0, fontWeight:FontWeight.w400),),
                SizedBox(height: 50.0,),
                Container(
                  height: 200.0,
                  width: 200.0,
                  decoration: BoxDecoration(
-                   color: Colors.blueAccent,
+                   //color: Colors.blueAccent,
+                   image: DecorationImage(
+                     image: AssetImage("images/image3.jpeg"),
+                   ),
                    borderRadius: BorderRadius.only(bottomRight:Radius.circular(20.0),
                      topLeft: Radius.circular(20.0),
                    )
                  ),
                 ),
-                SizedBox(height: 50.0,),
+                SizedBox(height: 100.0,),
                 Text("Click the button below to fill the form"
-                  , textAlign: TextAlign.center, style: TextStyle(fontSize: 20.0, fontWeight:FontWeight.w400),),
-                RoundWhiteButton(label: "Form",
-                  //onTap: Navigator.of(context BuildContext).MaterialPageRoute,
+                  , textAlign: TextAlign.center, style: TextStyle(fontSize: 20.0, fontWeight:FontWeight.w400, fontFamily: "GoogleSans",),),
+                SizedBox(height: 20.0,),
+                RoundWhiteButton(label: "Go to Form",
+                  onTap:(){ Navigator.of(context).push(MaterialPageRoute(
+                      builder: (BuildContext context) => RegisterPage()));},
                 ),
+                GroupLogo()
           ]),
           ),
     );

@@ -18,14 +18,14 @@ class RoundWhiteButton extends StatelessWidget {
       child: RaisedButton(
         elevation: 0.0,
         shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(18.0),
+            borderRadius: BorderRadius.circular(10.0),
             side: BorderSide(color:KdarkBlueColour)),
         padding: EdgeInsets.all(10.0),
         color: Colors.white,
         textColor: KdarkBlueColour,
         onPressed: onTap,
         child: Text(label,
-            style: TextStyle(fontSize: 20.0)),
+            style: TextStyle(fontSize: 20.0, fontFamily: "GoogleSans", )),
       ),
     );
   }
