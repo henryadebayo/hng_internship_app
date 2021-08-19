@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hng_internship_app/button.dart';
-import 'appbarlogo.dart';
-import 'const.dart';
+import 'package:hng_internship_app/widgets/appbarlogo.dart';
+import 'package:hng_internship_app/widgets/button.dart';
+import 'package:hng_internship_app/widgets/hngLogoPage.dart';
+import '../const.dart';
 import 'formScreen.dart';
-import 'hngLogoPage.dart';
 
 
 

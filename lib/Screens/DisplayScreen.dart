@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:hng_internship_app/widgets/appbarlogo.dart';
+import 'package:hng_internship_app/widgets/hngLogoPage.dart';
 
-import 'appbarlogo.dart';
-import 'const.dart';
-import 'dart:math' as Math;
-
-import 'hngLogoPage.dart';
-
+import '../const.dart';
 
 class DisplayScreen extends StatefulWidget {
    String userName;
@@ -17,11 +14,7 @@ class DisplayScreen extends StatefulWidget {
    DisplayScreen({this.userName, this.emailAddress, this.lastName, this.phoneNumber, this.stack});
 
   @override
-  _DisplayScreenState createState() => _DisplayScreenState(firstName:userName,
-      newEmailAddress:emailAddress,
-    newLastName: lastName,
-    newPhoneNumber: phoneNumber,
-    newStack: stack,
+  _DisplayScreenState createState() => _DisplayScreenState(firstName:userName,newEmailAddress:emailAddress, newLastName: lastName, newPhoneNumber: phoneNumber, newStack: stack,
   );
 }
 
@@ -52,7 +45,7 @@ class _DisplayScreenState extends State<DisplayScreen> {
       body: Column(
         children: [
           SizedBox(height: 20.0),
-          Center(child: Text("Here are all of your details $firstName",style:
+          Center(child: Text("$firstName Here are all of your details ",style:
           TextStyle(
               fontSize: 20.0,
               fontWeight: FontWeight.w300
@@ -79,7 +72,7 @@ class _DisplayScreenState extends State<DisplayScreen> {
                       Container(child:
                       Column(
                         children: [
-                          Text("Name:"),
+                          Text(" First Name:"),
                           SizedBox(height: 10.0,),
                           Text("$firstName", style:  TextStyle( fontWeight: FontWeight.w400, fontSize: 20.0),),
                           SizedBox(height: 50.0,),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'const.dart';
+import '../const.dart';
 
 class RoundWhiteButton extends StatelessWidget {
   final String label;

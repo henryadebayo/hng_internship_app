@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hng_internship_app/HomePage.dart';
-
 import 'DisplayScreen.dart';
 
 
@@ -70,8 +68,8 @@ class _RegisterPageState extends State<RegisterPage> {
                 fontSize: 14.0,
                 fontFamily: "GoogleSans"),
           ),
-          onSaved: (String lastName) {
-            lastName = _lastName;
+          onSaved: (lastName) {
+            _lastName = lastName;
           },
           // ignore: missing_return
           validator: (String lastName) {
@@ -100,8 +98,8 @@ class _RegisterPageState extends State<RegisterPage> {
           hintStyle: TextStyle(
               color: Colors.black12, fontSize: 14.0, fontFamily: "GoogleSans"),
         ),
-        onSaved: (String email) {
-          email = _emailAddress;
+        onSaved: (email) {
+          _emailAddress = email;
         },
         validator: (String email) {
           String errorMessage;
@@ -134,8 +132,8 @@ class _RegisterPageState extends State<RegisterPage> {
                 fontSize: 14.0,
                 fontFamily: "GoogleSans"),
           ),
-          onSaved: (String phoneNumber) {
-            phoneNumber = _phoneNumber;
+          onSaved: ( phoneNumber) {
+            _phoneNumber = phoneNumber;
           },
           validator: (String phoneNumber) {
             if (phoneNumber.isEmpty) {
@@ -162,9 +160,9 @@ class _RegisterPageState extends State<RegisterPage> {
               color:Color(0xFF0E3E3E3), fontSize: 14.0, fontFamily: "GoogleSans"),
         ),
         onSaved: (String address) {
-          address = _address;
+          _address = address;
         },
-        validator: (String address) {
+        validator: (address) {
           //String errorMessage;
           if (address.isEmpty) {
             return " Field can not be empty";

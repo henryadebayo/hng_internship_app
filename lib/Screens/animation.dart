@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hng_internship_app/HomePage.dart';
+
+import 'HomePage.dart';
 
 
 class FunAnimation extends StatefulWidget {
